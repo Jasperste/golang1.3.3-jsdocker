@@ -1,14 +1,11 @@
 FROM golang:1.4
 
 # Copy the local package files to the container's workspace.
-RUN mkdir -p /var/app/current/go/src/customlinks
-
 ADD . /var/app/current/go/src/customlinks
 
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN mkdir customlinks
 RUN go install customlinks
 RUN go get
 
