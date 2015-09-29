@@ -28,6 +28,6 @@
 #ONBUILD RUN go-wrapper install
 
 # For Go 1.3
-FROM golang:1.3.3-onbuild
+FROM golang:1.4.1-onbuild
 
 EXPOSE 7727
