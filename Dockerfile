@@ -10,7 +10,7 @@ RUN go get
 RUN go install customlinks
 
 # Run the customlinks command by default when the container starts.
-ENTRYPOINT go/bin/customlinks
+ENTRYPOINT /go/bin/customlinks
 
 # Document that the service listens on port 8080.
 EXPOSE 7727
@@ -24,7 +24,7 @@ EXPOSE 7727
 # this will ideally be built by the ONBUILD below ;)
 #CMD ["go-wrapper", "run"]
 
-#ONBUILD COPY . var/app/current/go/src/customlinks
+#ONBUILD COPY . /var/app/current/go/src/customlinks
 #ONBUILD RUN go-wrapper download
 #ONBUILD RUN go-wrapper install
 
