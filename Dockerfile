@@ -24,8 +24,8 @@ WORKDIR /var/app/current/go/src/customlinks
 # this will ideally be built by the ONBUILD below ;)
 CMD ["go-wrapper", "run"]
 
-ONBUILD COPY . /go/src/customlinks
+ONBUILD COPY . var/app/current/go/src/customlinks
 ONBUILD RUN go-wrapper download
 ONBUILD RUN go-wrapper install
 
-expose 7727
+EXPOSE 7727
