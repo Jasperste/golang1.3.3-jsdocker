@@ -1,7 +1,7 @@
 FROM golang:1.4
 
 # Copy the local package files to the container's workspace.
-mkdir -p /var/app/current/go/src/customlinks
+RUN mkdir -p /var/app/current/go/src/customlinks
 
 ADD . /var/app/current/go/src/customlinks
 
