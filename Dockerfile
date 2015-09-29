@@ -1,6 +1,8 @@
 FROM golang:1.4
 
 # Copy the local package files to the container's workspace.
+mkdir -p /var/app/current/go/src/customlinks
+
 ADD . /var/app/current/go/src/customlinks
 
 # Build the outyet command inside the container.
