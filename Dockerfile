@@ -8,6 +8,7 @@ ADD . /var/app/current/go/src/customlinks
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
+RUN mkdir customlinks
 RUN go install customlinks
 RUN go get
 
